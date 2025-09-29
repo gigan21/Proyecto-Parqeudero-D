@@ -1,35 +1,33 @@
 @extends('layouts.app')
 
-@section('title', 'Iniciar Sesión')
+@section('title', 'Cyber Access')
 
 @section('content')
 <div class="max-w-md w-full space-y-8">
-    <div class="bg-white p-8 rounded-2xl shadow-2xl">
+    <div class="bg-gray-900 bg-opacity-90 p-8 rounded-2xl cyber-border cyber-glow">
         <!-- Logo y título -->
         <div class="text-center">
-            <div class="mx-auto h-12 w-12 bg-blue-600 rounded-full flex items-center justify-center">
-                <span class="text-white font-bold text-xl">✓</span>
+            <div class="mx-auto h-12 w-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center cyber-glow mb-4">
+                <span class="text-black font-bold text-xl">⟠</span>
             </div>
-            <h2 class="mt-6 text-3xl font-extrabold text-gray-900">
-                Iniciar Sesión
+            <h2 class="mt-6 text-3xl font-extrabold neon-cyan font-mono">
+                ACCESS LOGIN
             </h2>
-            <p class="mt-2 text-sm text-gray-600">
-                Accede a tu cuenta
+            <p class="mt-2 text-sm text-cyan-300 font-mono">
+                SYSTEM AUTHENTICATION
             </p>
         </div>
 
         <!-- Mensajes de éxito/error -->
         @if(session('success'))
-            <div class="mt-4 p-3 bg-green-100 text-green-800 rounded-lg">
-                {{ session('success') }}
+            <div class="mt-4 p-3 bg-green-900 bg-opacity-50 border border-green-500 text-green-400 rounded font-mono text-sm">
+                ✅ {{ session('success') }}
             </div>
         @endif
 
         @if($errors->any())
-            <div class="mt-4 p-3 bg-red-100 text-red-800 rounded-lg">
-                @foreach($errors->all() as $error)
-                    <p>{{ $error }}</p>
-                @endforeach
+            <div class="mt-4 p-3 bg-red-900 bg-opacity-50 border border-red-500 text-red-400 rounded font-mono text-sm">
+                ⚠️ @foreach($errors->all() as $error) {{ $error }} @endforeach
             </div>
         @endif
 
@@ -39,32 +37,33 @@
             
             <div class="space-y-4">
                 <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <label for="email" class="block text-sm font-medium text-cyan-300 mb-2 font-mono">[EMAIL]</label>
                     <input id="email" name="email" type="email" required 
-                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                           placeholder="tu@email.com" value="{{ old('email') }}">
+                           class="w-full px-4 py-3 bg-gray-800 border border-cyan-500 text-cyan-300 rounded-md placeholder-cyan-700 font-mono focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
+                           placeholder="user@cyber.net" 
+                           value="{{ old('email') }}">
                 </div>
 
                 <div>
-                    <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+                    <label for="password" class="block text-sm font-medium text-cyan-300 mb-2 font-mono">[PASSWORD]</label>
                     <input id="password" name="password" type="password" required 
-                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                           class="w-full px-4 py-3 bg-gray-800 border border-cyan-500 text-cyan-300 rounded-md placeholder-cyan-700 font-mono focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
                            placeholder="••••••••">
                 </div>
             </div>
 
             <div>
                 <button type="submit" 
-                        class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200">
-                    Ingresar
+                        class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-bold rounded-md text-black bg-gradient-to-r from-cyan-400 to-purple-500 hover:from-cyan-300 hover:to-purple-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 transition duration-200 font-mono cyber-glow">
+                    [ EXECUTE LOGIN ]
                 </button>
             </div>
 
             <div class="text-center">
-                <p class="text-sm text-gray-600">
-                    ¿No tienes cuenta? 
-                    <a href="{{ route('register') }}" class="font-medium text-blue-600 hover:text-blue-500 transition duration-200">
-                        Regístrate aquí
+                <p class="text-sm text-cyan-400 font-mono">
+                    NO IDENTITY? 
+                    <a href="{{ route('register') }}" class="font-bold neon-pink hover:text-pink-300 transition duration-200">
+                        [CREATE PROFILE]
                     </a>
                 </p>
             </div>

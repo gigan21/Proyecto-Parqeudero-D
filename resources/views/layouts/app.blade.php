@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- AÑADE ESTA LÍNEA -->
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>@yield('title', 'Sistema de Login')</title>
+    <title>@yield('title', 'Cyber Access')</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .gradient-bg {
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
         }
-        .btn-primary {
-            @apply bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-200;
+        .cyber-glow {
+            box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
         }
-        .btn-secondary {
-            @apply bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-200;
+        .neon-cyan {
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff;
+        }
+        .neon-pink {
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+        .cyber-border {
+            border: 1px solid #00ffff;
+            box-shadow: 0 0 15px #00ffff;
         }
     </style>
 </head>
