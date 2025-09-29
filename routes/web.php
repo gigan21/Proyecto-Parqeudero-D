@@ -8,7 +8,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\URL;
 
 
-
+if (app()->environment('production')) {
+    URL::forceScheme('https');
+}
 // Página principal con login
 Route::get('/', function () {
     return view('auth.login');
