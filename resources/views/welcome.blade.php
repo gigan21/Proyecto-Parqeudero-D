@@ -118,6 +118,36 @@
                         </li>
                     </ul>
                 </div>
+                 <!-- FORMULARIO DE LOGIN SIMPLE -->
+<div class="w-full max-w-md bg-white p-6 rounded-lg shadow-md mb-8">
+    <h2 class="text-2xl font-bold text-center mb-6">Iniciar Sesión</h2>
+    
+    <form method="POST" action="/login" class="space-y-4">
+        @csrf
+        
+        <div>
+            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+            <input type="email" id="email" name="email" required 
+                   class="w-full px-3 py-2 border border-gray-300 rounded-md">
+        </div>
+        
+        <div>
+            <label for="password" class="block text-sm font-medium mb-2">Contraseña</label>
+            <input type="password" id="password" name="password" required 
+                   class="w-full px-3 py-2 border border-gray-300 rounded-md">
+        </div>
+        
+        <button type="submit" 
+                class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">
+            Ingresar
+        </button>
+    </form>
+</div>
+<a href="{{ route('register') }}" class="btn btn-primary">Registrarse</a>
+
+<form method="POST" action="/login">
+    @csrf
+    </form>
                 <div class="bg-[#fff2f2] dark:bg-[#1D0002] relative lg:-ml-px -mb-px lg:mb-0 rounded-t-lg lg:rounded-t-none lg:rounded-r-lg aspect-[335/376] lg:aspect-auto w-full lg:w-[438px] shrink-0 overflow-hidden">
                     {{-- Laravel Logo --}}
                     <svg class="w-full text-[#F53003] dark:text-[#F61500] transition-all translate-y-0 opacity-100 max-w-none duration-750 starting:opacity-0 starting:translate-y-6" viewBox="0 0 438 104" fill="none" xmlns="http://www.w3.org/2000/svg">
