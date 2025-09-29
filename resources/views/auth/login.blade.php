@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Cyber Access')
+@section('title', 'Acceso Cyber')
 
 @section('content')
 <div class="max-w-md w-full space-y-8">
@@ -11,10 +11,10 @@
                 <span class="text-black font-bold text-xl">⟠</span>
             </div>
             <h2 class="mt-6 text-3xl font-extrabold neon-cyan font-mono">
-                ACCESS LOGIN
+                INICIAR SESIÓN
             </h2>
             <p class="mt-2 text-sm text-cyan-300 font-mono">
-                SYSTEM AUTHENTICATION
+                AUTENTICACIÓN DEL SISTEMA
             </p>
         </div>
 
@@ -37,15 +37,15 @@
             
             <div class="space-y-4">
                 <div>
-                    <label for="email" class="block text-sm font-medium text-cyan-300 mb-2 font-mono">[EMAIL]</label>
+                    <label for="email" class="block text-sm font-medium text-cyan-300 mb-2 font-mono">[CORREO]</label>
                     <input id="email" name="email" type="email" required 
                            class="w-full px-4 py-3 bg-gray-800 border border-cyan-500 text-cyan-300 rounded-md placeholder-cyan-700 font-mono focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
-                           placeholder="user@cyber.net" 
+                           placeholder="usuario@cyber.net" 
                            value="{{ old('email') }}">
                 </div>
 
                 <div>
-                    <label for="password" class="block text-sm font-medium text-cyan-300 mb-2 font-mono">[PASSWORD]</label>
+                    <label for="password" class="block text-sm font-medium text-cyan-300 mb-2 font-mono">[CONTRASEÑA]</label>
                     <input id="password" name="password" type="password" required 
                            class="w-full px-4 py-3 bg-gray-800 border border-cyan-500 text-cyan-300 rounded-md placeholder-cyan-700 font-mono focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
                            placeholder="••••••••">
@@ -55,15 +55,15 @@
             <div>
                 <button type="submit" 
                         class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-bold rounded-md text-black bg-gradient-to-r from-cyan-400 to-purple-500 hover:from-cyan-300 hover:to-purple-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 transition duration-200 font-mono cyber-glow">
-                    [ EXECUTE LOGIN ]
+                    [ EJECUTAR ACCESO ]
                 </button>
             </div>
 
             <div class="text-center">
                 <p class="text-sm text-cyan-400 font-mono">
-                    NO IDENTITY? 
+                    ¿SIN IDENTIDAD? 
                     <a href="{{ route('register') }}" class="font-bold neon-pink hover:text-pink-300 transition duration-200">
-                        [CREATE PROFILE]
+                        [CREAR PERFIL]
                     </a>
                 </p>
             </div>
