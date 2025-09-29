@@ -51,7 +51,7 @@ Route::post('/login', function (Request $request) {
     return back()->withErrors([
         'email' => 'Las credenciales proporcionadas no son correctas.',
     ]);
-});
+})->name('login'); // ← AÑADE ESTO
 
 // Dashboard protegido
 Route::get('/dashboard', function () {
