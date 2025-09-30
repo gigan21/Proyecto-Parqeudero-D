@@ -37,7 +37,7 @@
                     <label for="name" class="block text-sm font-medium text-purple-300 mb-2 font-mono">[NOMBRE COMPLETO]</label>
                     <input id="name" name="name" type="text" required 
                            class="w-full px-4 py-3 bg-gray-800 border border-purple-500 text-purple-300 rounded-md placeholder-purple-700 font-mono focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
-                           placeholder="JUAN CYBER" 
+                           placeholder="NOMBRE APELLIDO" 
                            value="{{ old('name') }}">
                 </div>
 
@@ -45,7 +45,7 @@
                     <label for="email" class="block text-sm font-medium text-purple-300 mb-2 font-mono">[CORREO]</label>
                     <input id="email" name="email" type="email" required 
                            class="w-full px-4 py-3 bg-gray-800 border border-purple-500 text-purple-300 rounded-md placeholder-purple-700 font-mono focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
-                           placeholder="usuario@cyber.net" 
+                           placeholder="usuario@gmail.com" 
                            value="{{ old('email') }}">
                 </div>
 
@@ -53,7 +53,7 @@
                     <label for="password" class="block text-sm font-medium text-purple-300 mb-2 font-mono">[CONTRASEÑA]</label>
                     <input id="password" name="password" type="password" required 
                            class="w-full px-4 py-3 bg-gray-800 border border-purple-500 text-purple-300 rounded-md placeholder-purple-700 font-mono focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
-                           placeholder="MÍN 8 CARACT">
+                           placeholder="MÍN 8 CARACTERES">
                 </div>
 
                 <div>

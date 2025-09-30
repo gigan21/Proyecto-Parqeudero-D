@@ -14,7 +14,7 @@
                 INICIAR SESIÓN
             </h2>
             <p class="mt-2 text-sm text-cyan-300 font-mono">
-                AUTENTICACIÓN DEL SISTEMA
+                AUTENTICACIÓN DEL SISTEMA PROYECTO CLOUND-D
             </p>
         </div>
 
@@ -40,7 +40,7 @@
                     <label for="email" class="block text-sm font-medium text-cyan-300 mb-2 font-mono">[CORREO]</label>
                     <input id="email" name="email" type="email" required 
                            class="w-full px-4 py-3 bg-gray-800 border border-cyan-500 text-cyan-300 rounded-md placeholder-cyan-700 font-mono focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500"
-                           placeholder="usuario@cyber.net" 
+                           placeholder="usuario@gmail.com" 
                            value="{{ old('email') }}">
                 </div>
 
